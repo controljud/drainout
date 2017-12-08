@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         $posts = DB::table('posts')
             ->select('posts.id', 'posts.title', 'posts.message', 'users.name', 'posts.created_at')
-            ->join('users', 'users.id', 'posts.id_user')->orderBy('id', 'desc')->get();
+            ->join('users', 'users.id', 'posts.id_user')->orderBy('id', 'desc')->paginate(15);
         return view('home', array('posts' => $posts));
     }
 }
