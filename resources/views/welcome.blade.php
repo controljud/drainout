@@ -78,7 +78,12 @@
                 <div class="title m-b-md">
                     Drainout
                 </div>
-                <p>Converse com alguém, nem que seja você mesmo</p>
+                <div class="dv-home-text" style="max-width:900px;">
+                    <h4>Converse com alguém, nem que seja você mesmo</h4>
+                    <h4>O que dizer? O que você quiser, só você pode ler ou escrever no seu espaço</h4>
+                    <h4>Drainout não é um confessionário, não é um blog e não é uma rede social, é somente um espaço onde podemos escrever tudo o que sentimos, nos incomoda, frustra, sem que alguém saiba, ou seja, é um lugar para drenar . Esse espaço é seu</h4>
+                    <h2>Sem censura! Diga o que quiser.</h2>
+                </div>
             </div>
         </div>
     </body>

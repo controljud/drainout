@@ -37,3 +37,9 @@
     height:100px;
     resize:none;
 }
+.dv-home-text{
+    max-width:900px;
+}
+.home-text{
+    color:black;
+}
