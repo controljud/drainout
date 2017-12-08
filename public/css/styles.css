@@ -17,3 +17,23 @@
     padding-bottom:30px;
     padding-top:10px;
 }
+.post{
+    padding:10px;
+}
+.post-item{
+    cursor:pointer;
+}
+.post-item:hover{
+    background-color: #f2f2f2;
+}
+.sp-comments{
+    margin-right:20px;
+}
+.new-drain{
+    margin-top:16px;
+    margin-left:16px;
+}
+#message, #comment{
+    height:100px;
+    resize:none;
+}

@@ -25,8 +25,11 @@ class HomeController extends Controller
     public function index()
     {
         $posts = DB::table('posts')
-            ->select('posts.id', 'posts.title', 'posts.message', 'users.name', 'posts.created_at')
-            ->join('users', 'users.id', 'posts.id_user')->orderBy('id', 'desc')->paginate(15);
+            ->select('posts.id', 'posts.title', 'posts.message', 'users.name', 'posts.created_at', DB::raw('count(comments.id) as comments'))
+            ->join('users', 'users.id', 'posts.id_user')
+            ->leftJoin('comments', 'comments.id_post', 'posts.id')
+            ->groupBy('posts.id', 'posts.title', 'posts.message', 'users.name', 'posts.created_at')
+            ->orderBy('id', 'desc')->paginate(15);
         return view('home', array('posts' => $posts));
     }
 }
