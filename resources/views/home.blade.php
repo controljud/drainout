@@ -48,14 +48,16 @@
                                         <div class="post-title">{{$post->title}}</div>
                                         <div class="post-message">{{$post->message}}</div>
                                         <div class="post-footer">
+                                            @if($post->comments > 0)
                                             <span class="badge badge-info sp-comments">+ {{$post->comments}}</span>
+                                            @endif
                                             {{$post->created_at}}
                                         </div>
                                     </div>
                                 @endforeach
                             @else
                                 <div class="post post-center">
-                                    Não há mensagens ainda
+                                    Não há postagem ainda. Clique em "Novo drain" para começar
                                 </div>
                             @endif
                         </div>

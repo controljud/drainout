@@ -21,7 +21,7 @@ class PostController extends Controller{
         return redirect(route('home'));
     }
 
-    public function postIndex(Request $request){
+    public function getPost(Request $request){
         $user = Auth::user();
         $id_post = $request->segments()[1];
         $post = DB::table('posts')
@@ -47,6 +47,9 @@ class PostController extends Controller{
         $post = Post::where('id', $id_post)->where('id_user', $user->id)->first();
 
         if($post){
+            $post->updated_at = date('Y-m-d H:m:s');
+            $post->save();
+
             $comment = new Comment;
             $comment->message = $request->comment;
             $comment->id_post = $id_post;

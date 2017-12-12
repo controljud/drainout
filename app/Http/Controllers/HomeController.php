@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 use DB;
 
 class HomeController extends Controller
@@ -24,12 +25,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         $posts = DB::table('posts')
             ->select('posts.id', 'posts.title', 'posts.message', 'users.name', 'posts.created_at', DB::raw('count(comments.id) as comments'))
             ->join('users', 'users.id', 'posts.id_user')
             ->leftJoin('comments', 'comments.id_post', 'posts.id')
+            ->where('posts.id_user', $user->id)
             ->groupBy('posts.id', 'posts.title', 'posts.message', 'users.name', 'posts.created_at')
-            ->orderBy('id', 'desc')->paginate(15);
+            ->orderBy('posts.updated_at', 'desc')->paginate(15);
         return view('home', array('posts' => $posts));
     }
 }
