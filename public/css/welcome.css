@@ -1,0 +1,7 @@
+.flex-center{
+    background-image: url('/image/img_bgd_alone.jpeg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

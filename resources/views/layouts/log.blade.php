@@ -19,7 +19,7 @@
     <script src="{{ asset('js/scripts.js') }}"></script>
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="app-log">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">

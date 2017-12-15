@@ -1,3 +1,11 @@
+.app-log{
+    background-image: url('/image/img_bgd_alone.jpeg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:100%;
+}
 .post-footer{
     text-align:right;
     font-size:10px;
