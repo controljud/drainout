@@ -4,13 +4,16 @@
     <section class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active"><a href="/home">Home</a></li>
+                </ol>
                 <div class="panel panel-default">
                     <div class="post" id="{{$post->id}}">
                         <div class="post-title">{{$post->title}}</div>
                         <div class="post-message">{{$post->message}}</div>
                         <div class="post-footer">{{$post->created_at}}</div>
                         <div class="post-comment form-group">
-                            <a class="btn btn-info btn-sm" data-toggle="collapse" href="#new-comment" aria-expanded="false" aria-controls="#new-comment">Novo comentário</a>
+                            <a class="btn btn-info btn-sm" class="bt-new-text" id="comm" data-toggle="collapse" href="#new-comment" aria-expanded="false" aria-controls="#new-comment">Novo comentário</a>
                         </div>
                         <div class="collapse" id="new-comment">
                             <form method="post" action="/add/comment">

@@ -9,7 +9,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <a class="btn btn-primary new-drain" data-toggle="collapse" href="#new-post" aria-expanded="false" aria-controls="#new-post">Novo drain</a>
+                                <a class="btn btn-primary new-drain" class="bt-new-text" id="post" data-toggle="collapse" href="#new-post" aria-expanded="false" aria-controls="#new-post">Novo drain</a>
                             </div>
                         </div>
                     </div>
