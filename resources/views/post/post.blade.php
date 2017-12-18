@@ -11,7 +11,7 @@
                     <div class="post" id="{{$post->id}}">
                         <div class="post-title">{{$post->title}}</div>
                         <div class="post-message">{{$post->message}}</div>
-                        <div class="post-footer">{{$post->created_at}}</div>
+                        <div class="post-footer">{{date('d/m/Y H:i', strtotime($post->created_at))}}</div>
                         <div class="post-comment form-group">
                             <a class="btn btn-info btn-sm" class="bt-new-text" id="comm" data-toggle="collapse" href="#new-comment" aria-expanded="false" aria-controls="#new-comment">Novo comentário</a>
                         </div>
@@ -31,7 +31,7 @@
                     @foreach($comments as $comment)
                         <div class="post">
                             <div class="post-message">{{$comment->message}}</div>
-                            <div class="post-footer">{{$post->created_at}}</div>
+                            <div class="post-footer">{{date('d/m/Y H:i', strtotime($comment->created_at))}}</div>
                         </div>
                     @endforeach
                 </div>

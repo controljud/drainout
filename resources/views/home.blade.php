@@ -49,9 +49,9 @@
                                         <div class="post-message">{{$post->message}}</div>
                                         <div class="post-footer">
                                             @if($post->comments > 0)
-                                            <span class="badge badge-info sp-comments">+ {{$post->comments}}</span>
+                                            <span class="badge badge-primary sp-comments">+ {{$post->comments}}</span>
                                             @endif
-                                            {{$post->created_at}}
+                                            {{date('d/m/Y H:i', strtotime($post->created_at))}}
                                         </div>
                                     </div>
                                 @endforeach
