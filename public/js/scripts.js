@@ -11,4 +11,16 @@ $(document).ready(function(){
             $('#comment').focus();
         }
     });
+    $('#message').focus(function(){
+        $(this).css({
+            'height': '90px'
+        });
+    });
+    $('#message').blur(function(){
+        if($(this).val() == '') {
+            $(this).css({
+                'height': '37px'
+            });
+        }
+    });
 });

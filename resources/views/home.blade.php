@@ -7,27 +7,15 @@
             <div class="panel panel-default">
                 <div class="first-content">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <a class="btn btn-primary new-drain" class="bt-new-text" id="post" data-toggle="collapse" href="#new-post" aria-expanded="false" aria-controls="#new-post">Novo drain</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
                         <div class="col-md-12">
-                            <div class="panel-heading collapse" id="new-post">
+                            <div class="panel-heading" id="new-post">
                                 <form method="post" action="/add/post">
                                     {{ csrf_field() }}
-                                    <div class="form-group">
-                                        <label for="title">Título</label>
-                                        <input class="form-control" type="text" name="title" id="title"/>
+                                    <div>
+                                        <input class="form-control" type="text" name="title" id="title" placeholder="Título"/>
                                     </div>
                                     <div class="form-group">
-                                        <label for="message">Mensagem</label>
-                                        <textarea class="form-control" name="message" id="message" ></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="submit" class="btn btn-success btn-sm" value="Enviar" />
+                                        <textarea class="form-control" name="message" id="message" placeholder="O quer você quer desabafar?"></textarea>
                                     </div>
                                 </form>
                             </div>
