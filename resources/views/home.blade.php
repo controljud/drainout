@@ -11,9 +11,6 @@
                             <div class="panel-heading" id="new-post">
                                 <form method="post" action="/add/post">
                                     {{ csrf_field() }}
-                                    <div>
-                                        <input class="form-control" type="text" name="title" id="title" placeholder="Título"/>
-                                    </div>
                                     <div class="form-group">
                                         <textarea class="form-control" name="message" id="message" placeholder="O quer você quer desabafar?"></textarea>
                                     </div>
@@ -33,7 +30,6 @@
                             @if(count($posts))
                                 @foreach($posts as $post)
                                     <div class="post post-item" id="{{$post->id}}">
-                                        <div class="post-title">{{$post->title}}</div>
                                         <div class="post-message">{{$post->message}}</div>
                                         <div class="post-footer">
                                             @if($post->comments > 0)

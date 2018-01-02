@@ -13,7 +13,6 @@ class PostController extends Controller{
         $user = Auth::user();
 
         $post = new Post;
-        $post->title = $request->title;
         $post->message = $request->message;
         $post->id_user = $user->id;
         $post->save();
@@ -25,7 +24,7 @@ class PostController extends Controller{
         $user = Auth::user();
         $id_post = $request->segments()[1];
         $post = DB::table('posts')
-            ->select('posts.id', 'posts.title', 'posts.message', 'users.name', 'posts.created_at')
+            ->select('posts.id', 'posts.message', 'users.name', 'posts.created_at')
             ->join('users', 'users.id', 'posts.id_user')
             ->where('id_user', $user->id)
             ->where('posts.id', $id_post)

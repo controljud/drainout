@@ -9,7 +9,6 @@
                 </ol>
                 <div class="panel panel-default">
                     <div class="post" id="{{$post->id}}">
-                        <div class="post-title">{{$post->title}}</div>
                         <div class="post-message">{{$post->message}}</div>
                         <div class="post-footer">{{date('d/m/Y H:i', strtotime($post->created_at))}}</div>
                         <div class="post-comment form-group">

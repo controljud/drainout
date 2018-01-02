@@ -27,7 +27,7 @@ class HomeController extends Controller
     {
         $user = Auth::user();
         $posts = DB::table('posts')
-            ->select('posts.id', 'posts.title', 'posts.message', 'users.name', 'posts.created_at', DB::raw('count(comments.id) as comments'))
+            ->select('posts.id', 'posts.message', 'users.name', 'posts.created_at', DB::raw('count(comments.id) as comments'))
             ->join('users', 'users.id', 'posts.id_user')
             ->leftJoin('comments', 'comments.id_post', 'posts.id')
             ->where('posts.id_user', $user->id)
